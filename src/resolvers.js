@@ -29,7 +29,31 @@ module.exports = {
         },
     },
     Mutation: {
-        
+
+        checkout : async (_, { cloths }, {  }) => {
+            return await Promise.all(cloths.map((cloth)=>{
+                return axios({
+                    url : "http://localhost:3000/cart/",
+                    method : "POST",
+                    data : cloth
+                })
+            })).then(()=>{
+                return true;
+            });
+        },
+        addProduct : async (_, { name, size }, {  }) => {
+            console.log(name, size);
+            return await axios({
+                url : `http://localhost:3000/clothes/`,
+                method : "POST",
+                data : {
+                    name, 
+                    availableSize : [size]
+                }
+            }).then((response)=>{
+                return response.data;
+            });
+        },
     }
 };
 

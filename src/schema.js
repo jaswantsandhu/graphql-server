@@ -21,7 +21,7 @@ type User {
 
 type Cloth {
     id : String,
-    name : String,
+    name : String!,
     sku : String,
     availableSize : [AvailableSize],
     isAvailable : Boolean,
@@ -29,10 +29,17 @@ type Cloth {
     matchingProducts : [Cloth]
 }
 
-type Mutation {
-    login(email: String, password : String): Boolean
+input ICloth {
+    id : String,
+    name : String!,
+    availableSize : [AvailableSize],
 }
 
+type Mutation {
+    addProduct(name : String!, size : AvailableSize) : Cloth
+    checkout(cloths : [ICloth]) : Boolean
+}
+ 
 `;
 
 module.exports = typeDefs;
