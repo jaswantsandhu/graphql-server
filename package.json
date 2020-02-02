@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon src/index.js",
+    "start": "nodemon src/index.js & npm run json-server-start",
     "start:ci": "node src/index.js",
-    "json-server-start" : "json-server --watch db.json"
+    "json-server-start": "json-server --watch db.json --port 3001"
   },
   "author": "",
   "license": "ISC",
