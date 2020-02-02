@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon src/index.js",
-    "start:ci": "node src/index.js"
+    "start:ci": "node src/index.js",
+    "json-server-start" : "json-server --watch db.json"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "apollo-server": "2.6.1",
     "axios": "^0.19.1",
     "graphql": "^14.2.1",
+    "json-server": "^0.15.1",
+    "nedb": "^1.8.0",
     "nodemon": "^1.18.4"
   },
   "devDependencies": {

@@ -1,0 +1,22 @@
+{
+    "clothes": [
+        {
+            "id" : "1",
+            "name" : "Hello World!!!",
+            "sku" : "dashdhjaskdhq",
+            "availableSize" : [ "L", "M" ],
+            "isAvailable" : true,
+            "price" : 312.33,
+            "matchingProducts" : ["2"]
+        },
+        {
+            "id" : "2",
+            "name" : "Hi World!!!",
+            "sku" : "dasddada",
+            "availableSize" : [ "S", "XL" ],
+            "isAvailable" : true,
+            "price" : 2131234321313123.33,
+            "matchingProducts" : ["1"]
+        }
+    ]
+  }
